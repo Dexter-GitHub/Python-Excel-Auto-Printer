@@ -26,7 +26,7 @@ def search(dirname, printerName):
             full_filename = os.path.join(dirname, filename)                       
             ext = os.path.splitext(full_filename)[-1]        
             if ext == '.xlsm' or ext == '.xlsx':
-                print(full_filename + " 인쇄 시작 !")
+                print('"' + filename + '"' + " 인쇄 시작 !")
                 win32api.ShellExecute(0, 'printto', full_filename, '"' + printerName + '"', None,  0)
     else:
         os.system('cls')
